@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+}
+
+.container {
+    width: 300px; /* 容器宽度 */
+    height:500px;
+    background-color: rgba(128, 126, 124, 0.6);
+    padding: 20px; /* 内边距 */
+    border-radius: 5px; /* 边角半径 */
+    text-align: center;
+    border: 1px solid rgba(164, 162, 160, 0.8);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* 阴影 */
+}
+
+.logo img {
+    width: 250px; /* logo大小调整 */
+    margin-bottom: 10px; /* 边距调整 */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+button {
+    width: calc(100% - 10px); /* 宽度调整 */
+    padding: 8px; /* 内边距调整 */
+    margin-bottom: 10px; /* 边距调整 */
+    border: 1px solid #ccc;
+    border-radius: 15px; /* 边角半径 */
+    box-sizing: border-box;
+}
+textarea {
+    height: 150px; /* 增加文本框的高度 */
+    font-size: 1rem; /* 调整字体大小 */
+    font-family: 'Times New Roman', Times, serif;
+}
+button {
+    background-color: #A0522D; /* 按钮的默认背景颜色设置为棕色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px; /* 按钮内边距调整 */
+    font-size: 0.8rem; /* 字体大小调整 */
+    border-radius: 15px; /* 如果您也想要按钮边角圆润，可以加这个属性 */
+}
+
+    button:hover {
+        background-color: #8B4513; /* 按钮悬停状态的背景颜色设置为稍浅的棕色 */
+    }
+

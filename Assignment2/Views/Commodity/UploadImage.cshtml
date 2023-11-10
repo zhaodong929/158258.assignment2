@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null; 
+}
+
+<h2>Upload Image for Commodity</h2>
+
+@using (Html.BeginForm("UploadImage", "Commodity", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        <label for="commodityId">Commodity ID:</label>
+        <input type="number" name="commodityId" required />
+    </div>
+    <div>
+        <label for="fileUpload">Choose an image to upload:</label>
+        <input type="file" name="fileUpload" required />
+    </div>
+    <div>
+        <input type="submit" value="Upload" />
+    </div>
+}

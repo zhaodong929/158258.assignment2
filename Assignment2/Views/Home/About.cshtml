@@ -1,0 +1,123 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About On The Way</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 1120px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+      
+
+        background-image {
+            /*background-image: url('~/images/scene7.png');*/
+            background-size: cover;
+            background-position: left;
+            position: relative;
+            width: 1920px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        video-container {
+            position: relative;
+            height: 50%;
+        }
+
+        video {
+            width: 1550px;
+            height: 100%;
+            object-fit: cover;
+        }
+     
+
+    </style>
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="~/CSS/index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrap header-box">
+            <div class="logo"></div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="https://localhost:44339/Home/Index" class="nav-link ">Home</a></li>
+                    <li><a href="https://localhost:44339/Commodity/Display" class="nav-link">Commodity</a></li>
+                    <li><a href="https://localhost:44339/Forums/ShowForums" class="nav-link">Forums</a></li>
+                    <li><a href="https://localhost:44339/Home/UserList" class="nav-link">Users</a></li>
+                    <li><a href="https://localhost:44339/Home/About" class="nav-link">About us</a></li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <div class="search-m">
+                    <div class="search-logo"></div>
+                    <div class="form">
+                        <input type="text" class="keywords" placeholder="The destination you want to go">
+                        <button class="iconfont">&#xe61a;></button>
+                        <div class="search-helper"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+        <a href="javascript:;">
+            <img class="background-image" src="~/images/Stockholm8.jpg" alt="">
+        </a>
+        <div class="about" style="margin-left:200px">
+
+            <h1>About On The Way</h1>
+            <h3>
+                We spend our lives on the way.<br>Along the way, what may just be beautiful scenery during a journey,<br /> turns out to be the rare and splendid moments of life.<br>
+            </h3>
+            <h3>Here you'll find the travels you love and friends who share your passion.<br> Let's explore aimlessly together!</h3>
+            <h3>@Html.Raw(ViewBag.Message)</h3>
+        </div>
+        <div class="video-container">
+
+            <video autoplay loop muted>
+                <source src="~/images/202311071857.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+
+
+
+</body>
+<footer class="site-footer" style="width:1550px">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <img src="~/images/onthewaylogo.png" alt="On The Way Logo" />
+        </div>
+        <div class="footer-links">
+            <a href="https://localhost:44339/Home/Terms">Terms of Use</a>
+            <a href="https://localhost:44339/Home/Privacy">Privacy and Cookies Statement</a>
+            <a href="https://localhost:44339/Home/CookieConsent">Cookie consent</a>
+            <a href="https://localhost:44339/Home/SiteMap">Site Map</a>
+            <a href="https://localhost:44339/Home/ContactUs">Contact us</a>
+        </div>
+        <div class="footer-disclaimer">
+            <p>© 2023 On The Way. All rights reserved. Your comprehensive travel companion offering information, services, forum blogs, and travel products.</p>
+        </div>
+    </div>
+</footer>
+
+</html>

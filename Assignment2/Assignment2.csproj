@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9CCB0D7-D5D5-44CA-BF12-098A20F728DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assignment2</RootNamespace>
+    <AssemblyName>Assignment2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44339</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CommodityController.cs" />
+    <Compile Include="Controllers\ForumsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model2\Forums.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Forums.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2\Forums.cs">
+      <DependentUpon>Forums.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2\Forums.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Forums.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model2\ForumViewModel.cs" />
+    <Compile Include="Model2\Images.cs">
+      <DependentUpon>Forums.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models3\Commodity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Commodity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models3\Commodity.cs">
+      <DependentUpon>Commodity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models3\Commodity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Commodity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models3\Commodity1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Commodity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginUser.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginUser.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginUser.cs">
+      <DependentUpon>LoginUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginUser.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginUser1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginUser.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="CSS\demo.css" />
+    <Content Include="CSS\demo_index.html" />
+    <Content Include="CSS\forums.css" />
+    <Content Include="CSS\upload.css" />
+    <Content Include="CSS\iconfont.css" />
+    <Content Include="CSS\iconfont.js" />
+    <Content Include="CSS\index.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CSS\userlist.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\202311071857.mp4" />
+    <Content Include="images\AI3.png" />
+    <Content Include="images\AI4.png" />
+    <Content Include="images\AI5.png" />
+    <Content Include="images\AI6.png" />
+    <Content Include="images\back.jpg" />
+    <Content Include="images\background1.png" />
+    <Content Include="images\background2.png" />
+    <Content Include="images\background3.png" />
+    <Content Include="images\background4.png" />
+    <Content Include="images\background5.png" />
+    <Content Include="images\background6.png" />
+    <Content Include="images\bag.jpg" />
+    <Content Include="images\bag2.jpg" />
+    <Content Include="images\bag3.jpg" />
+    <Content Include="images\bag4.jpg" />
+    <Content Include="images\caption %281%29.jpg" />
+    <Content Include="images\caption %282%29.jpg" />
+    <Content Include="images\caption %283%29.jpg" />
+    <Content Include="images\caption %284%29.jpg" />
+    <Content Include="images\caption %285%29.jpg" />
+    <Content Include="images\caption %286%29.jpg" />
+    <Content Include="images\caption %287%29.jpg" />
+    <Content Include="images\caption %288%29.jpg" />
+    <Content Include="images\caption.jpg" />
+    <Content Include="images\dubai.png" />
+    <Content Include="images\goods1.jpg" />
+    <Content Include="images\goods10.jpg" />
+    <Content Include="images\goods11.jpg" />
+    <Content Include="images\goods12.jpg" />
+    <Content Include="images\goods13.jpg" />
+    <Content Include="images\goods14.jpg" />
+    <Content Include="images\goods15.jpg" />
+    <Content Include="images\goods16.jpg" />
+    <Content Include="images\goods2.jpg" />
+    <Content Include="images\goods3.jpg" />
+    <Content Include="images\goods4.jpg" />
+    <Content Include="images\goods5.jpg" />
+    <Content Include="images\goods6.jpg" />
+    <Content Include="images\goods7.jpg" />
+    <Content Include="images\goods8.jpg" />
+    <Content Include="images\goods9.jpg" />
+    <Content Include="images\image-1.png" />
+    <Content Include="images\image-10.png" />
+    <Content Include="images\image-15.png" />
+    <Content Include="images\image-2.png" />
+    <Content Include="images\image-3.png" />
+    <Content Include="images\image-4.png" />
+    <Content Include="images\image-5.png" />
+    <Content Include="images\image-6.png" />
+    <Content Include="images\image-7.png" />
+    <Content Include="images\image-8.png" />
+    <Content Include="images\image-9.png" />
+    <Content Include="images\like1.jpg" />
+    <Content Include="images\like10.jpg" />
+    <Content Include="images\like11.jpg" />
+    <Content Include="images\like12.jpg" />
+    <Content Include="images\like2.jpg" />
+    <Content Include="images\like3.jpg" />
+    <Content Include="images\like4.jpg" />
+    <Content Include="images\like5.jpg" />
+    <Content Include="images\like6.jpg" />
+    <Content Include="images\like7.jpg" />
+    <Content Include="images\like8.jpg" />
+    <Content Include="images\like9.jpg" />
+    <Content Include="images\new-delhi.png" />
+    <Content Include="images\new-york.png" />
+    <Content Include="images\OnTheWayLogo.png" />
+    <Content Include="images\onthewaylogo_TZ6_1.ico" />
+    <Content Include="images\paris.png" />
+    <Content Include="images\photo1.jpg" />
+    <Content Include="images\photo2.jpg" />
+    <Content Include="images\photo3.jpg" />
+    <Content Include="images\photo4.jpg" />
+    <Content Include="images\photo5.jpg" />
+    <Content Include="images\picture1.png" />
+    <Content Include="images\picture11.png" />
+    <Content Include="images\picture12.png" />
+    <Content Include="images\picture13.png" />
+    <Content Include="images\picture14.png" />
+    <Content Include="images\picture15.png" />
+    <Content Include="images\picture16.png" />
+    <Content Include="images\picture2.png" />
+    <Content Include="images\picture3.png" />
+    <Content Include="images\picture4.png" />
+    <Content Include="images\picture5.png" />
+    <Content Include="images\picture6.png" />
+    <Content Include="images\picture7.png" />
+    <Content Include="images\picture8.png" />
+    <Content Include="images\picture9.png" />
+    <Content Include="images\san.jpg" />
+    <Content Include="images\scene.jpg" />
+    <Content Include="images\scene10.png" />
+    <Content Include="images\scene11.png" />
+    <Content Include="images\scene13.png" />
+    <Content Include="images\scene14.png" />
+    <Content Include="images\scene15.png" />
+    <Content Include="images\scene2.jpg" />
+    <Content Include="images\scene3.jpg" />
+    <Content Include="images\scene5.png" />
+    <Content Include="images\scene6.png" />
+    <Content Include="images\scene7.png" />
+    <Content Include="images\scene8.png" />
+    <Content Include="images\scene9.png" />
+    <Content Include="images\Stockholm.jpg" />
+    <Content Include="images\Stockholm1.jpg" />
+    <Content Include="images\Stockholm10.jpg" />
+    <Content Include="images\Stockholm2.jpg" />
+    <Content Include="images\Stockholm3.jpg" />
+    <Content Include="images\Stockholm4.jpg" />
+    <Content Include="images\Stockholm5.jpg" />
+    <Content Include="images\Stockholm6.jpg" />
+    <Content Include="images\Stockholm7.jpg" />
+    <Content Include="images\Stockholm8.jpg" />
+    <Content Include="images\Stockholm9.jpg" />
+    <Content Include="images\story-1.png" />
+    <Content Include="images\story-2.png" />
+    <Content Include="images\story-3.png" />
+    <Content Include="images\搜索 %281%29.png" />
+    <Content Include="images\搜索-copy.png" />
+    <Content Include="images\搜索.png" />
+    <Content Include="JS\forums.js" />
+    <Content Include="JS\upload.js" />
+    <Content Include="JS\index.js" />
+    <Content Include="JS\login.js" />
+    <Content Include="Model2\Forums.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Forums.edmx</DependentUpon>
+      <LastGenOutput>Forums.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model2\Forums.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Forums.edmx</DependentUpon>
+      <LastGenOutput>Forums1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models3\Commodity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Commodity.edmx</DependentUpon>
+      <LastGenOutput>Commodity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models3\Commodity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Commodity.edmx</DependentUpon>
+      <LastGenOutput>Commodity1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LoginUser.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginUser.edmx</DependentUpon>
+      <LastGenOutput>LoginUser.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LoginUser.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginUser.edmx</DependentUpon>
+      <LastGenOutput>LoginUser1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\LoginUser.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoginUser.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LoginUser.edmx.diagram">
+      <DependentUpon>LoginUser.edmx</DependentUpon>
+    </Content>
+    <Content Include="CSS\iconfont.json" />
+    <Content Include="CSS\iconfont.ttf" />
+    <EntityDeploy Include="Models3\Commodity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Commodity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models3\Commodity.edmx.diagram">
+      <DependentUpon>Commodity.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model2\Forums.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Forums.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model2\Forums.edmx.diagram">
+      <DependentUpon>Forums.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\indexback.cshtml" />
+    <Content Include="Views\Home\UserList.cshtml" />
+    <Content Include="Views\Commodity\UploadImage.cshtml" />
+    <Content Include="Views\Commodity\Display.cshtml" />
+    <Content Include="Views\Forums\Upload.cshtml" />
+    <Content Include="Views\Forums\Index.cshtml" />
+    <Content Include="Views\Forums\ShowForums.cshtml" />
+    <Content Include="Views\Forums\ShowComments.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55935</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44339/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

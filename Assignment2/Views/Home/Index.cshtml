@@ -1,0 +1,413 @@
+﻿@model IEnumerable<Assignment2.Models3.Commodity>
+@using PagedList.Mvc;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="~/images/onthewaylogo_TZ6_1.ico">
+    <!-- 引入首页样式 -->
+    <link rel="stylesheet" href="~/CSS/index.css">
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="~/CSS/iconfont.css">
+    <!-- 引入全局样式 -->
+    <link rel="stylesheet" href="~/CSS/reset.css">
+</head>
+
+
+<body class="bodycontainer">
+    <div class="header">
+        <div class="wrap header-box">
+            <div class="logo"></div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="https://localhost:44339/Home/Index" class="nav-link ">Home</a></li>
+                    <li><a href="https://localhost:44339/Commodity/Display" class="nav-link">Commodity</a></li>
+                    <li><a href="https://localhost:44339/Forums/ShowForums" class="nav-link">Forums</a></li>
+                    <li><a href="https://localhost:44339/Home/UserList" class="nav-link">Users</a></li>
+                    <li><a href="https://localhost:44339/Home/About" class="nav-link">About us</a></li>
+                </ul>
+            </nav>
+
+            <div class="search">
+                <div class="search-m">
+                    <div class="search-logo"></div>
+                    <div class="form">
+                        <input type="text" class="keywords" placeholder="The destination you want to go">
+                        <button class="iconfont">&#xe61a;></button>
+                        <div class="search-helper"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 轮播图开始 -->
+    <div class="banner">
+        <div class="wrap banner-box">
+            <div class="banner-slide">
+                <div class="slide">
+                    <a href="javascript:;">
+                        <img class="img" src="~/images/background1.png" alt="">
+                    </a>
+                    <a href="javascript:;" class="prev">&lt;</a>
+                    <a href="javascript:;" class="next">&gt;</a>
+                    <ul class="banner-btn">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 轮播图结束 -->
+    <!-- 主体部分 -->
+ 
+    <div class="cta1">
+        <h3>On The Way</h3>
+        <p>A gateway to a new world</p>
+
+    </div>
+
+
+
+    <div class="content">
+        <div class="center">
+            <div class="miaosha item">
+                <h2 class="sub-title"> Travellers Stories</h2>
+                <div class="stories">
+                    <div>
+                        <img src="/images/story-1.png">
+                        <p>Popular European countries with a budget of just $10.000</p>
+                    </div>
+                    <div>
+                        <img src="/images/story-2.png">
+                        <p>Traveled more than 100 Countries in less than a year</p>
+                    </div>
+                    <div>
+                        <img src="/images/story-3.png">
+                        <p>Best experience you get white traveling to Thailand</p>
+                    </div>
+                </div>
+            </div>
+            <div class="youxuan item">
+
+
+
+                <div class="carousel-container">
+                    <h2 class="sub-title">Featured Preferences</h2>
+                    <h1 class="sub-title" style="font-size: 24px; text-align:left">You might like these</h1>
+                    <div class="carousel">
+                        <div class="carousel-track-container">
+
+                            <ul class="carousel-track">
+
+                                <!-- Repeated for each item -->
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like1.jpg" alt="Tokyo Tour">
+                                    <p>Mt Fuji and Hakone 1-Day Bus Tour return by Bullet Train (Shinkansen)</p>
+                                    <div class="rating-dots">
+
+                                    </div>
+                                    <span class="tour-rating">Views:4,157</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like2.jpg" alt="Tokyo Tour">
+                                    <p>1-Day Tokyo Bus Tour</p>
+                                    <div class="rating-dots">
+
+                                    </div>
+                                    <span class="tour-rating">Views:3,539</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like3.jpg" alt="Tokyo Tour">
+                                    <p>Mt Fuji, Hakone Lake Ashi Cruise Bullet Train Day Trip from Tokyo</p>
+                                    <div class="rating-dots">   </div>
+
+                                    <span class="tour-rating">Views:5,413</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like4.jpg" alt="Tokyo Tour">
+                                    <p>Mt Fuji and Hakone 1-Day Bus Tour return by Bus</p>
+                                    <div class="rating-dots">   </div>
+                                    <span class="tour-rating">Views:757</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like9.jpg" alt="Tokyo Tour">
+                                    <p>Small-Group Explore Angkor Wat Sunrise Tour with Guide from Siem Reap</p>
+                                    <div class="rating-dots">   </div>
+                                    <span class="tour-rating">Views:4,055</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like10.jpg" alt="Tokyo Tour">
+                                    <p>Hanoi Jeep Tours: Food+ Culture + Sight +Fun By Vietnam Army Jeep</p>
+                                    <div class="rating-dots">   </div>
+                                    <span class="tour-rating">Views:4,155</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like11.jpg" alt="Tokyo Tour">
+                                    <p>Ubud Tour - Best of Ubud - All Inclusive</p>
+                                    <div class="rating-dots">   </div>
+                                    <span class="tour-rating">Views:6,785</span>
+                                </li>
+                                <li class="carousel-slide">
+
+                                    <img class="carousel-image" src="~/images/like12.jpg" alt="Tokyo Tour">
+                                    <p>Grand Circle Island and Haleiwa 9 Hour Tour</p>
+                                    <div class="rating-dots">   </div>
+                                    <span class="tour-rating">Views:10.390</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <button class="carousel-button carousel-button-left">&lt;</button>
+                        <button class="carousel-button carousel-button-right">&gt;</button>
+                    </div>
+                </div>
+
+                <div class="carousel-container destination-container">
+                    <h1 class="sub-title" style="font-size: 24px;text-align:left">Top destinations for your next vacation</h1>
+                    <div class="carousel destination-carousel">
+                        <div class="carousel-track-container destination-track-container">
+                            <ul class="carousel-track destination-track">
+                                <!-- Repeated for each item -->
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (1).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Yellowstone National Park, WY</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (2).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Punta Cana, Dominican Republic</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (3).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Orlando, FL</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (4).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Sedona, AZ</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (5).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Cancun, Mexico</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (6).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">New York City, NY</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (7).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Las Vegas, NV</p>
+                                </li>
+                                <li class="destination-slide">
+                                    <img class="destination-image" src="~/images/caption (8).jpg" alt="Cancun, Mexico">
+                                    <p class="destination-title">Yosemite National Park, CA</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="destination-button destination-button-left">&lt;</button>
+                        <button class="destination-button destination-button-right">&gt;</button>
+                    </div>
+                </div>
+
+                <div class="gaungchang item">
+
+                    <div class="container">
+                        <h2 class="sub-title">Exclusives</h2>
+                        <div class="exclusives">
+                            <div>
+                                <img src="/images/image-1.png">
+                                <span>
+                                    <h3>London</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-2.png">
+                                <span>
+                                    <h3>Switzerland</h3>
+                                    <p>Starts $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-3.png">
+                                <span>
+                                    <h3>Australia</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-4.png">
+                                <span>
+                                    <h3>France</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-5.png">
+                                <span>
+                                    <h3>Amsterdam</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-6.png">
+                                <span>
+                                    <h3>Netherlands</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-7.png">
+                                <span>
+                                    <h3>New York</h3>
+                                    <p>Starts $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-8.png">
+                                <span>
+                                    <h3>Chicaga</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-9.png">
+                                <span>
+                                    <h3>San Francisco</h3>
+                                    <p>Starts $250</p>
+                                </span>
+                            </div>
+                            <div>
+                                <img src="/images/image-10.png">
+                                <span>
+                                    <h3>Shanghai</h3>
+                                    <p>Starts  $250</p>
+                                </span>
+                            </div>
+                        </div>
+                        <h2 class="sub-title">Trending Places</h2>
+                        <div class="tranding">
+                            <div>
+                                <img src="/images/dubai.png" alt="">
+                                <h3>Dubai</h3>
+                            </div>
+                            <div>
+                                <img src="/images/new-york.png" alt="">
+                                <h3>New York</h3>
+                            </div>
+                            <div>
+                                <img src="/images/paris.png" alt="">
+                                <h3>Paris</h3>
+                            </div>
+                            <div>
+                                <img src="/images/new-delhi.png" alt="">
+                                <h3>New Delhi</h3>
+                            </div>
+                        </div>
+
+                        <div class="cta">
+                            <h3>Sharing <br> Earning Now</h3>
+                            <p>Great opportunity to make money by <br> sharing your extra space.</p>
+                            <a href="https://localhost:44339/Forums/ShowForums" class="cta-btn">Know More</a>
+                        </div>
+
+
+                    </div>
+                    <div class="tuijian item">
+
+                        <div class="container">
+
+                            <h2 class="sub-title">Recommended for you</h2>
+                            <!-- 卡片布局容器 -->
+                            <div class="card-container">
+                                @{
+                                    int counter = 0; // 计数器，用来限制显示的商品数量
+                                }
+                                @foreach (var item in Model)
+                                {
+                                    if (counter < 10) // 限制为前10个商品
+                                    {
+                                        <div class="card" onclick="redirectToUrl('YourTargetUrlHere');">
+                                            <img src="@Url.Action("DisplayImage", "Commodity", new { id = item.Id })" alt="@item.ItemNames" />
+                                            <div class="card-info">
+                                                <div class="card-title">@item.ItemNames</div>
+                                                <div class="card-price">RMB￥:@item.Price</div>
+                                            </div>
+                                        </div>
+                                    }
+                                    counter++;
+                                    if (counter % 5 == 0)
+                                    {
+                                        <div style="clear:both;"></div> <!-- 清除浮动，以便每五个卡片换行 -->
+                                    }
+                                }
+                            </div>
+                            <a href="https://localhost:44339/Commodity/Display" class="list">Click here to commodity list</a>
+
+
+                        </div>
+                        <footer class="site-footer">
+                            <div class="footer-inner">
+                                <div class="footer-logo">
+                                    <img src="~/images/onthewaylogo.png" alt="On The Way Logo" />
+                                </div>
+                                <div class="footer-links">
+                                    <a href="https://localhost:44339/Home/Terms">Terms of Use</a>
+                                    <a href="https://localhost:44339/Home/Privacy">Privacy and Cookies Statement</a>
+                                    <a href="https://localhost:44339/Home/CookieConsent">Cookie consent</a>
+                                    <a href="https://localhost:44339/Home/SiteMap">Site Map</a>
+                                    <a href="https://localhost:44339/Home/ContactUs">Contact us</a>
+                                </div>
+                                <div class="footer-disclaimer">
+                                    <p>© 2023 On The Way. All rights reserved. Your comprehensive travel companion offering information, services, forum blogs, and travel products.</p>
+                                </div>
+                            </div>
+                        </footer>
+
+                    </div>
+
+                </div>
+
+            </div>
+           
+        </div>
+       
+        <!-- 楼层设计 -->
+        <!--<div class="elevator">
+        <a href="javascript:;">Travellers Stories</a>
+        <a href="javascript:;">Featured Preferences</a>
+        <a href="javascript:;">Exclusives</a>
+        <a href="javascript:;">Recommended for you</a>
+    </div>-->
+    </div>
+
+
+
+
+    <!-- 引入首页JS文件 -->
+    <script src="~/JS/index.js"></script>
+</body>
+
+</html>

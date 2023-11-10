@@ -1,0 +1,31 @@
+﻿@model List<Assignment2.Model2.Forums>
+
+@{
+    ViewBag.Title = "Forums";
+}
+<link rel="stylesheet" type="text/css" href="~/CSS/forums.css" />
+
+<h2>Forums</h2>
+
+<!-- 论坛帖子列表 -->
+@foreach (var item in Model)
+{
+    <div class="forum-post">
+        <h3>@item.Title</h3>
+        <p>@item.Description</p>
+        <!-- 显示头像和图片 -->
+        <!-- ... -->
+    </div>
+}
+
+<!-- 上传按钮，打开模态表单 -->
+<button id="upload-btn" class="btn btn-primary">Upload New Post</button>
+
+<!-- 模态表单 -->
+<div id="upload-modal" style="display:none;">
+    @Html.Partial("Upload")
+</div>
+
+@section Scripts {
+    <script src="~/JS/forums.js"></script>
+}

@@ -1,0 +1,44 @@
+﻿@model Assignment2.Model2.Forums
+
+@{
+    ViewBag.Title = "Upload Post";
+}
+
+
+<h2>Upload New Post</h2>
+
+@using (Html.BeginForm("Upload", "Forums", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <input type="file" name="AvatarFile" />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title)
+        @Html.EditorFor(model => model.Title)
+        @Html.ValidationMessageFor(model => model.Title)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description)
+        @Html.TextAreaFor(model => model.Description)
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Avatar)
+            <input type="file" name="Avatar" />
+        </div>*@
+
+    <div class="form-group">
+        <label>Upload Images</label>
+        <input type="file" name="images" multiple />
+    </div>
+
+    <input type="submit" value="Upload" class="btn btn-default" />
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

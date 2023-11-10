@@ -1,0 +1,79 @@
+﻿
+table {
+    width:100%;
+    border-collapse: collapse; /* 折叠边框 */
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+    /* 表头样式 */
+    table tr:first-child {
+        background-color: #f2f2f2; /* 浅灰色背景 */
+        color: #333; /* 深色文本 */
+    }
+
+    /* 表头和单元格的边框 */
+    table th,
+    table td {
+        border: 1px solid #ddd; /* 浅灰色边框 */
+        padding: 8px 16px; /* 内填充 */
+        text-align: left; /* 文本左对齐 */
+    }
+
+    /* 鼠标悬停在行上时的样式 */
+    table tr:not(:first-child):hover {
+        background-color: #f5f5f5; /* 当鼠标悬停时变为浅灰色背景 */
+    }
+
+    /* 隔行变色效果 */
+    table tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+/* 权限高亮显示 */
+span {
+    font-weight: bold; /* 加粗文本 */
+    padding: 5px; /* 内填充 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+    /* VIP用户样式 */
+    span.VIP用户 {
+        background-color: #ffd700; /* 金色背景 */
+        color: #fff; /* 白色文本 */
+    }
+
+    /* 普通用户样式 */
+    span.普通用户 {
+        background-color: #90ee90; /* 浅绿色背景 */
+        color: #333; /* 深色文本 */
+    }
+
+/* 表头样式 */
+h2 {
+   
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.stories {
+    display: flex;
+    align-items: flex-start; /* 修改为flex-start */
+}
+
+    .stories img {
+        width: 200px; /* 设置图片宽度 */
+        height: auto; /* 保持宽高比，高度自动计算 */
+    }
+
+
+table {
+    margin-left: 20px; /* 表格距离图片的左边距 */
+}
+.td {
+    position:relative;
+    right:1600px;
+    top:200px;
+    
+}

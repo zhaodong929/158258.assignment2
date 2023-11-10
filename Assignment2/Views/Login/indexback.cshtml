@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/images/onthewaylogo_TZ6_1.ico">
+    <link rel="png" href="~/images/OnTheWayLogo.png">
+    <link rel="stylesheet" href="~/CSS/login.css">
+    <title>登录页面</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="~/images/OnTheWayLogo.png" alt="Logo">
+        </div>
+        <form id="loginForm" action="/Login/IndexBack" method="post">
+            <h3 class="title" style="font-family:Arial, Helvetica, sans-serif">Log in to your account</h3>
+            <div class="input-group">
+                <!-- <label for="username">请输入用户名</label> -->
+                <input type="text" id="username" name="username" placeholder="Please enter username" required>
+            </div>
+            <div class="input-group">
+                <!-- <label for="password">请输入密码</label> -->
+                <input type="password" id="password" name="password" placeholder="Please enter password" required>
+            </div>
+            <div class="input-group captcha-group">
+                <!-- <label for="captcha">请输入验证码</label> -->
+                <input type="text" id="captcha" name="captcha" placeholder="Please enter verification code" required>
+                验证码：<img src="https://dummyimage.com/60x40/000/fff&text=6D3J" alt="verification code" id="captchaImage">
+            </div>
+            <div class="input-group submit">
+                <!-- <label for="captcha">请输入验证码</label> -->
+                <input type="submit" id="submit" name="submit" value="login" required>
+            </div>
+            <p style="color:red">@ViewBag.error</p>
+
+            <p class="note">Don't have an account yet?<a href="#" id="showRegisterForm">Create an account</a></p>
+        </form>
+
+
+        <form id="registerForm" class="form-container" style="display:none;" action="/Login/Register" method="post">
+            <h3 style="font-family: Arial, Helvetica, sans-serif">Sign up for an account</h3>
+            <div class="input-group">
+                <!-- <label for="password">请输入邮箱</label> -->
+                <input type="text" id="email" name="email" placeholder="Please enter your email" required>
+            </div>
+            <div class="input-group">
+                <!-- <label for="username">请输入用户名</label> -->
+                <input type="text" id="username" name="username" placeholder="Please enter your username" required>
+            </div>
+            <div class="input-group">
+                <!-- <label for="password">请输入密码</label> -->
+                <input type="password" id="password" name="password" placeholder="Please enter your password" required>
+            </div>
+            <div class="input-group">
+                <!-- <label for="password">请输入密码</label> -->
+                <input type="password" id="password" name="password" placeholder="Please confirm your password" required>
+            </div>
+
+            <button class="register" type="submit">enroll</button>
+            <p style="color:red">@ViewBag.error</p>
+            <p class="note">Already have an account?<a href="#" id="showLoginForm">Go back to login</a></p>
+        </form>
+
+    </div>
+
+
+
+    <script src="~/JS/login.js"></script>
+</body>
+</html>

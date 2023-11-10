@@ -1,0 +1,89 @@
+﻿<!-- ShowComments.cshtml -->
+@model List<Assignment2.Model2.Images>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Comments</h2>
+
+@foreach (var comment in Model)
+{
+    <div class="comment">
+        @if (comment.Forums != null)
+        {
+            <p>Forum Title: @comment.Forums.Title</p>
+        }
+
+        <img src="data:image;base64,@Convert.ToBase64String(comment.ImageData)" alt="Comment Image" />
+
+        <!-- Delete Comment Button -->
+        <button class="btn btn-danger" onclick="deleteComment(@comment.Id)">Delete Comment</button>
+    </div>
+}
+
+<!-- Create Comment Button -->
+<button class="btn btn-primary" onclick="openCreateCommentModal()">Create Comment</button>
+
+<!-- Modal for Create Comment -->
+<div class="modal fade" id="createCommentModal" tabindex="-1" role="dialog" aria-labelledby="createCommentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createCommentModalLabel">Create Comment</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("CreateComment", "Forums", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-group">
+                    <label for="ForumId">Forum:</label>
+
+                    @Html.DropDownList("ForumId", new SelectList(Model.Select(f => new SelectListItem { Text = f.ForumTitle, Value = f.ForumId.ToString() }), "Value", "Text"), new { @class = "form-control" })
+
+                </div>
+
+                    <div class="form-group">
+                        <label for="ImageFile">Image:</label>
+                        <input type="file" name="ImageFile" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Comment</button>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function deleteForum(forumId) {
+        // Add AJAX or form submission logic for deleting the forum
+        // You can use the forumId parameter to identify which forum to delete
+        // After deletion, you can refresh the page or update the forum list
+        // For now, let's just log to the console
+        console.log('Deleting forum with ID ' + forumId);
+    }
+
+    function openCreateForumModal() {
+        $('#createForumModal').modal('show');
+    }
+
+    function deleteComment(commentId) {
+        // Add AJAX or form submission logic for deleting the comment
+        // You can use the commentId parameter to identify which comment to delete
+        // After deletion, you can refresh the page or update the comment list
+        // For now, let's just log to the console
+        console.log('Deleting comment with ID ' + commentId);
+    }
+
+    function openCreateCommentModal() {
+        $('#createCommentModal').modal('show');
+    }
+</script>

@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户列表</title>
+    <link rel="icon" href="~/images/onthewaylogo_TZ6_1.ico">
+    <link rel="stylesheet" href="~/CSS/index.css">
+
+    <link rel="stylesheet" href="~/CSS/userlist.css">
+</head>
+<body>
+
+    <div class="stories">
+        <img src="~/images/san.jpg" style="width: 1580px; height: auto;">
+
+        <div class="td">
+            <h2 style="text-align:left">User List</h2>
+            <table>
+                <!-- 表格内容 -->
+                <tr>
+                    <td>ID</td>
+                    <td>Username</td>
+                    <td>Email</td>
+                    <td>Power</td>
+                </tr>
+                @foreach (var item in ViewBag.ulist)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.username</td>
+                        <td>@item.email</td>
+                        <td>
+                            @if (item.state == 2)
+                            {
+                                <span>VIP用户</span>
+                            }
+                            else if (item.state == 1)
+                            {
+                                <span>普通用户</span>
+                            }
+                        </td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+
+   
+    <!-- 引入首页JS文件 -->
+    <!--<script src="~/JS/index.js"></script>-->
+</body>
+</html>

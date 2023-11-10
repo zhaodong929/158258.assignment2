@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4f4d4d;
+    /* 添加背景图片 */
+    background-image: url('./../images/caption.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.login-container {
+   
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background-color: #9c9898;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.2); /* 设置背景颜色为白色和透明度 */
+    backdrop-filter: blur(10px); /* 应用模糊效果，使背景图片通过透明背景更为柔和 */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 添加边框，颜色为黑色，透明度为10% */
+    border-radius: 10px; /* 添加圆角 */
+    /* 应用动画 */
+    animation: slideUp 0.3s ease-out;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.logo {
+    margin: auto;
+    position: relative;
+    top: -30px;
+    width: 300px;
+    height: 90px;
+    /* background-color: rgba(167, 155, 127, 0.5); */
+}
+/* .title{
+    position: relative;
+    top:-10px;
+} */
+
+
+
+.logo img {
+  /*   position: absolute;
+    top: 40px;
+    left: 45%; */
+
+    width: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 添加边框，颜色为黑色，透明度为10% */
+    border-radius: 10px; /* 添加圆角 */
+    opacity: 0.6; /* 设置LOGO图片的透明度为80% */
+   
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 添加边框，颜色为黑色，透明度为10% */
+    border-radius: 20px; /* 添加圆角 */
+    outline: none; /* 移除输入框获取焦点时的外边框 */
+    box-shadow: none; /* 移除输入框获取焦点时的阴影 */
+
+}
+
+/*button {
+    position:relative;
+    top:20px;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: rgba(32, 32, 27, 0.3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px; 
+}*/
+#submit {
+    position: relative;
+    top: 20px;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: rgba(32, 32, 27, 0.3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.register {
+    position: relative;
+    top: 20px;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: rgba(32, 32, 27, 0.3);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background-color: rgba(32, 32, 27, 0.3);
+}
+.note{
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.captcha-group img{
+    position: relative;
+    top:10px
+
+}
+
+/* ... (您的其他代码) */
+
+/* The Modal (background) */
+/*.modal {
+    display: none;*/ /* Hidden by default */
+    /*z-index: 1;*/ /* Sit on top */
+    /*position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 250px;*/ /* Full width */
+    /*height: 200px;*/ /* Full height */
+    /*overflow: auto;*/ /* Enable scroll if needed */
+    /*border: 1px solid #888;
+}*/
+
+/* Modal Content/Box */
+/*.modal-content {
+    color:rgb(98, 27, 27);
+    background-color: #fefefe;
+    margin: 15% auto;*/ /* 15% from the top and centered */
+    /*padding: 20px;
+    width: 80%;*/ /* Could be more or less, depending on screen size */
+/*}*/
+
+/* The Close Button */
+/*.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }*/
